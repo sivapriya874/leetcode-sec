@@ -1,0 +1,11 @@
+class Solution {
+    public int countPrimeSetBits(int left, int right) {
+        int result = 0;
+        for (int i = left; i <= right; i++) {
+            int setBits = Integer.bitCount(i);  // count 1s        
+            if (isPrime(setBits)) {
+           result++;
+            }
+        }   
+        return result;
+    }
